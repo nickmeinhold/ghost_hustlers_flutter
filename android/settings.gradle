@@ -13,3 +13,7 @@ plugins.each { name, path ->
     include ":$name"
     project(":$name").projectDir = pluginDirectory
 }
+
+// Unity project
+include ':unityLibrary'
+project(':unityLibrary').projectDir=new File('..\\GhostHustlersUnity\\androidExport\\unityLibrary')
