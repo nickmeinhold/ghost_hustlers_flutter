@@ -4,6 +4,10 @@ A new Flutter project.
 
 ## Missing files 
 
+- run `flutter pub get`
+
+
+
 Unity  
 - Add ARCore Settings with your API Keys 
 
@@ -11,7 +15,10 @@ Unity build for Android
 - export project to GhostHustlersUnity/androidExport 
 - copy strings.xml from launcher to unityLibrary 
 
-Unity build for iOS 
+run Unity build for iOS 
+- open Player Settings -> ARCore 
+  - add API Keys (will be ignored by git)
+  - set iOS Support enabled
 - export project to GhostHustlersUnity/iosBuild
 
 iOS 

@@ -39,6 +39,7 @@ lib/generated_plugin_registrant.dart
 
 # Contain API Keys
 GhostHustlersUnity/ProjectSettings/ARCoreProjectSettings.json
+GhostHustlersUnity/Assets/GoogleARCore/Resources/RuntimeSettings/CloudServicesApiKey.txt
 ios/Runner/GoogleService-Info.plist
 # we can just re-build these so no need to keep
 GhostHustlersUnity/iosBuild/
