@@ -37,5 +37,10 @@ lib/generated_plugin_registrant.dart
 
 # My added ignores ############################################
 
-# Contains the API Key for Cloud Anchors
+# Contain API Keys
 GhostHustlersUnity/ProjectSettings/ARCoreProjectSettings.json
+ios/Runner/GoogleService-Info.plist
+# we can just re-build these so no need to keep
+GhostHustlersUnity/iosBuild/
+ios/Build/
+
