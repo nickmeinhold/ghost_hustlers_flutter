@@ -69,3 +69,6 @@ dependencies {
     implementation project(':unityLibrary')
     implementation fileTree(dir: project(':unityLibrary').getProjectDir().toString() + ('\\libs'), include: ['*.jar'])
 }
+
+// added for firebase auth
+apply plugin: 'com.google.gms.google-services'

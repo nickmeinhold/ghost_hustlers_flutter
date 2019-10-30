@@ -8,24 +8,22 @@ import Flutter
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     // store the commandline args for later when running Unity
-    InitArgs(CommandLine.argc, CommandLine.unsafeArgv)
-    UnityFrameworkLoad()
+    SetupUnity(CommandLine.argc, CommandLine.unsafeArgv, launchOptions)
     
     let controller : FlutterViewController = window?.rootViewController as! FlutterViewController
     let unityChannel = FlutterMethodChannel(name: "co.enspyr.ghost_hustlers_flutter/unity",
                                               binaryMessenger: controller.binaryMessenger)
     unityChannel.setMethodCallHandler({
-      (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
-      // Note: this method is invoked on the UI thread.
-      guard call.method == "showUnity" else {
-        result(FlutterMethodNotImplemented)
-        return
-      }
+        (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
+      
+        // Note: this method is invoked on the UI thread.
+        guard call.method == "showUnity" else {
+            result(FlutterMethodNotImplemented)
+            return
+        }
         
-        let navigationController:UINavigationController = controller.navigationController
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "UnityVC") as? UnityVC
-        vc.view = getUnityView()
-        navigationController.pushViewController(vc, animated: true)
+        controller.present(getUnityView(), animated: true, completion: nil)
+        
     })
     
     GeneratedPluginRegistrant.register(with: self)

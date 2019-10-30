@@ -6,7 +6,7 @@
 //  Copyright © 2019 The Chromium Authors. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#include <UnityFramework/UnityFramework.h>
 
 #ifndef UnityUtils_h
 #define UnityUtils_h
@@ -15,14 +15,10 @@
 extern "C" {
 #endif
 
-    // 1
-    void InitArgs(int argc, char* argv[]);
-    // 2
-    void UnityFrameworkLoad();
-    // 3
-    UnityView* getUnityView()
-    // ?
-    void UnityRun();
+    // 
+    void SetupUnity(int argc, char* argv[], NSDictionary* launchOptions);
+    // 
+    UIViewController* getUnityView();
 
 #ifdef __cplusplus
 } // extern "C"
