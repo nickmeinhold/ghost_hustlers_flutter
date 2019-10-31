@@ -22,12 +22,23 @@ run Unity build for iOS
 - export project to GhostHustlersUnity/iosBuild
 
 build UnityFramework 
+-----------------------------------------------
 - File -> Workspace Settings 
   - use new build system 
   - set Derived Data to relative to project 
-- add `Data` folder to UnityFramework target membership 
 - set the UnityFramework as the active scheme 
-- Product -> Build 
+------------------------------------------------
+- select Runner target from Runner project
+- in General / "Frameworks, Libraries and Embedded Content", press +
+- select Unity-iPhone/UnityFramework.framework
+- in Build Phases / Link Binary with Libraries, remove UnityFramework.framework ( select it and press - )
+- add `- (void)frameworkWarmup:(int)argc argv:(char*[])argv;` to UnityFramework.h 
+- add `Data` folder to UnityFramework target membership 
+
+- if there is an error 
+- build the iosBuild project 
+- find the products 
+- copy the products to where the error can't find them 
 
 iOS 
 - run pod install
