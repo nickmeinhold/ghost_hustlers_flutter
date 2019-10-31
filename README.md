@@ -12,8 +12,8 @@ Unity
 - Add ARCore Settings with your API Keys 
 
 Unity build for Android 
+- open Build Settings and select Export Project 
 - export project to GhostHustlersUnity/androidExport 
-- copy strings.xml from launcher to unityLibrary 
 
 run Unity build for iOS 
 - open Player Settings -> ARCore 
