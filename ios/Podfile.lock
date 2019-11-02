@@ -1,4 +1,11 @@
 PODS:
+  - ARCore/Base (1.12.0)
+  - ARCore/CloudAnchors (1.12.0):
+    - ARCore/Base (~> 1.12)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.2)
+    - Protobuf (~> 3.5)
   - Firebase/Auth (6.10.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.3.0)
@@ -57,6 +64,11 @@ PODS:
   - GoogleDataTransportCCTSupport (1.2.1):
     - GoogleDataTransport (~> 3.0)
     - nanopb (~> 0.3.901)
+  - GoogleToolboxForMac/Defines (2.2.1)
+  - GoogleToolboxForMac/Logger (2.2.1):
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (2.2.1)":
+    - GoogleToolboxForMac/Defines (= 2.2.1)
   - GoogleUtilities/AppDelegateSwizzler (6.3.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -81,14 +93,17 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Protobuf (3.10.0)
 
 DEPENDENCIES:
+  - ARCore/CloudAnchors (~> 1.12.0)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
 
 SPEC REPOS:
   trunk:
+    - ARCore
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -100,9 +115,11 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
+    - GoogleToolboxForMac
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
+    - Protobuf
 
 EXTERNAL SOURCES:
   firebase_auth:
@@ -113,6 +130,7 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
+  ARCore: 33ee7ed8c1571d840d49cda8fad52efc611f742b
   Firebase: 5e6b7b12bf9adb90986688edc06b156c37e109cd
   firebase_auth: 1e3b7bdd37b9fbd4ef75ba1d985b00be09e02d3d
   firebase_core: ae55ea92448ec8675d325da4db22cf3b4d58a54d
@@ -127,10 +145,12 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 434cc7be25e71dc04b8d0e3079125127b330e84a
   GoogleDataTransport: 166f9b9f82cbf60a204e8fe2daa9db3e3ec1fb15
   GoogleDataTransportCCTSupport: f6ab1962e9dc05ab1fb938b795e5b310209edeec
+  GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
 
-PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
+PODFILE CHECKSUM: fa601e8cf24d1e4543fa783ff9ab339aeb5fda7e
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4

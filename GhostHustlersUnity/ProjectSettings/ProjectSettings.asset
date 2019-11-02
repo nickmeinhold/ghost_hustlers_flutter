@@ -457,7 +457,7 @@ PlayerSettings:
   actionOnDotNetUnhandledException: 1
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
-  enableCrashReportAPI: 0
+  enableCrashReportAPI: 1
   cameraUsageDescription: "Use the camera to find ghosts and\u2026 profit!"
   locationUsageDescription: 
   microphoneUsageDescription: 

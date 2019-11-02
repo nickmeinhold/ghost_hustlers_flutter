@@ -4,6 +4,17 @@
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
+workspace 'Runner'
+
+target 'Unity-iPhone' do
+  xcodeproj '../GhostHustlersUnity/iosBuild/Unity-iPhone.xcodeproj'
+  pod 'ARCore/CloudAnchors', '~> 1.12.0'
+end
+target 'UnityFramework' do
+  xcodeproj '../GhostHustlersUnity/iosBuild/Unity-iPhone.xcodeproj'
+  pod 'ARCore/CloudAnchors', '~> 1.12.0'
+end
+
 project 'Runner', {
   'Debug' => :debug,
   'Profile' => :release,

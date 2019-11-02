@@ -29,11 +29,13 @@ class _MyHomePageState extends State<MyHomePage> {
   static const platform =
       const MethodChannel('co.enspyr.ghost_hustlers_flutter/unity');
 
-  void _showUnity() async {
+  String statusText = 'Waiting...';
+
+  void _loadUnity() async {
     try {
-      final int result = await platform.invokeMethod('showUnity');
+      await platform.invokeMethod('loadUnity');
     } on PlatformException catch (e) {
-      print("Failed to show Unity: '${e.message}'.");
+      print("Failed to load Unity: '${e.message}'.");
     }
   }
 
@@ -47,14 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
+            Text(statusText),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _showUnity,
+        onPressed: _loadUnity,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
