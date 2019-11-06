@@ -130,9 +130,12 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// </summary>
         public void OnCreateRoomClicked()
         {
-            m_Manager.matchMaker.CreateMatch(m_Manager.matchName, m_Manager.matchSize,
-                                           true, string.Empty, string.Empty, string.Empty,
-                                           0, 0, _OnMatchCreate);
+            // m_Manager.matchMaker.CreateMatch(m_Manager.matchName, m_Manager.matchSize,
+            //                                true, string.Empty, string.Empty, string.Empty,
+            //                                0, 0, _OnMatchCreate);
+            
+            // Application.Unload();
+            NativeCallsManager.showHostMainWindow();
         }
 
         /// <summary>

@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _loadUnity() async {
     try {
-      await platform.invokeMethod('loadUnity');
+      await platform.invokeMethod('showUnity');
     } on PlatformException catch (e) {
       print("Failed to load Unity: '${e.message}'.");
     }
